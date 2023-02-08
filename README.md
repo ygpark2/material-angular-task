@@ -92,7 +92,7 @@ Build at: 2023-02-08T08:07:47.926Z - Hash: e0fad6ca79377044 - Time: 37259ms
 
 ![GitHub Pages - Settings](./images/settings.png)
 
-**3.** The message *Your site is published at https://rodrigokamada.github.io/angular-github-actions/* should be displayed.
+**3.** The message *Your site is published at https://ygpark2.github.io/material-angular-task/ should be displayed.
 
 ![GitHub Pages - Pages](./images/github-pages.png)
 
