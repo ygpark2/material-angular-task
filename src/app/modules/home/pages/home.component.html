@@ -1,0 +1,47 @@
+<div fxLayout="column" fxLayoutAlign="space-around" fxLayoutGap="12px">
+
+  <div fxFlex>
+    <mat-grid-list cols="12" rowHeight="fit" gutterSize="1px" [style.height]="'50px'">
+      <mat-grid-tile [colspan]="2"> </mat-grid-tile>
+      <mat-grid-tile [colspan]="4">
+        <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+          <mat-form-field appearance="fill" [style.width.%]="100">
+            <input matInput placeholder="Task name" [(ngModel)]="searchName" name="searchName" #name="ngModel">
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4">
+        <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+          <mat-button-toggle-group [(ngModel)]="status" aria-label="Task Status">
+            <mat-button-toggle value="all">All</mat-button-toggle>
+            <mat-button-toggle value="active">Active</mat-button-toggle>
+            <mat-button-toggle value="complete">Complete</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2">
+        <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+          <button mat-raised-button color="accent" (click)="onClickCreate()">ADD</button>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="12px grid" *ngFor="let task of tasks">
+      <div fxFlex="100" fxFlexOffset="10">
+        <app-task-item *ngIf="filter(task)" [task]="task"></app-task-item>
+      </div>
+      <div fxFlexOffset="10"></div>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="12px grid">
+      <div fxFlex="100" fxFlexOffset="10" fxFlexAlign="end">
+       Total number of active tasks : {{ getTotalActiveCount() }} 
+      </div>
+    </div>
+  </div>
+
+</div>

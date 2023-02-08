@@ -1,0 +1,29 @@
+<mat-card *ngIf="task" style="padding: 20px">
+    
+    <mat-card-title>
+      <h2 *ngIf="task.id">{{task.name | uppercase}} Details</h2>
+      <h2 *ngIf="!task.id">Create</h2>
+    </mat-card-title>
+    <mat-card-subtitle> </mat-card-subtitle>
+    <mat-card-content>
+
+      <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+        <mat-form-field appearance="fill" [style.width.%]="80">
+          <input matInput placeholder="Task name"
+                required
+                [(ngModel)]="task.name" name="name"
+                #name="ngModel">
+          <mat-error *ngIf="name.hasError('required')">
+            Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+          <mat-checkbox *ngIf="task.id" [(ngModel)]="task.complete" name="complete" [disabled]="false">Complete</mat-checkbox>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions fxFlexAlign="end">
+      <button mat-raised-button color="primary" (click)="onSubmit()">SAVE</button>
+      <button mat-raised-button color="warn" (click)="onCancel()">CLOSE</button>
+    </mat-card-actions>
+</mat-card>

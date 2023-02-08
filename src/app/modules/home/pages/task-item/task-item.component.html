@@ -1,0 +1,15 @@
+<mat-card>
+  <!-- <mat-icon mat-card-image (click)="onClickEdit(product)">image</mat-icon> -->
+  <!-- <img mat-card-image src="{{product.media ? product.media : '/assets/images/no_photo.jpg'}}"> -->
+  <img src="">
+  <mat-card-content fxLayout="row wrap" xLayoutAlign="center center">
+    <div fxFlex class="mat-body text-center">{{task.name}}</div>
+    <div fxFlex class="mat-body text-center">
+      <mat-checkbox [(ngModel)]="task.complete" [disabled]="true">Complete</mat-checkbox>
+    </div>
+  </mat-card-content>
+  <mat-card-actions fxFlexAlign="end">
+    <button mat-stroked-button (click)="onClickEdit(task)">EDIT</button>
+    <button mat-stroked-button (click)="onClickDelete(task)">DELETE</button>
+  </mat-card-actions>
+</mat-card>
