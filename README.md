@@ -60,3 +60,40 @@ Build at: 2023-02-08T08:07:47.926Z - Hash: e0fad6ca79377044 - Time: 37259ms
 
 **5.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL [https://ygpark2.github.io/material-angular-task/](https://ygpark2.github.io/material-angular-task/) and check if the application is working. Replace the `ygpark2` value with your GitHub username.
 
+
+​### Validate the run of the GitHub Actions flow
+
+**1.** Let's validate the run of the GitHub Actions flow. Access the repository [https://github.com/ygpark2/material-angular-task](https://github.com/ygpark2/material-angular-task) created and click on the link *Actions*.
+
+![GitHub Actions - Repository](./images/main-page.png)
+
+**2.** Click on the flow runned.
+
+![GitHub Actions - Workflows](./images/actions.png)
+
+**3.** Click on the job *deploy*.
+
+![GitHub Actions - Jobs](./images/actions-deploy.png)
+
+**4.** Click on each step to validate the run.
+
+![GitHub Actions - Steps](./images/actions-deploy-details.png)
+
+**5.** Ready! We validate the run of the GitHub Actions flow.
+
+
+### Validate the publish of the GitHub Pages
+
+**1.** Let's validate the publish of the GitHub Pages. Access the repository [https://github.com/ygpark2/material-angular-task](https://github.com/ygpark2/material-angular-task) created and click on the link *Settings*.
+
+![GitHub Pages - Repository](./images/main-page.png)
+
+**2.** Click on the menu *Pages*.
+
+![GitHub Pages - Settings](./images/settings.png)
+
+**3.** The message *Your site is published at https://rodrigokamada.github.io/angular-github-actions/* should be displayed.
+
+![GitHub Pages - Pages](./images/github-pages.png)
+
+**4.** Ready! We validate the publish of the GitHub Pages.
